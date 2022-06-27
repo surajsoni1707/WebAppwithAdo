@@ -1,0 +1,25 @@
+﻿<p>Edit Course Details</p>
+<div class="container">
+    @{Html.BeginForm();}
+    <div class="row">
+        <div class="col-lg-3">
+            @Html.Label("Course Name")
+        </div>
+        <div class="col-lg-3">
+            @Html.TextBox("name", (string)ViewBag.Name)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            @Html.Label("Fees")
+        </div>
+        <div class="col-lg-3">
+            @Html.TextBox("Fees", (Decimal)ViewBag.Fees)
+
+
+            @Html.Hidden("id", (int)ViewBag.Id)
+        </div>
+    </div>
+    <input type="submit" value="Save" />
+    @{ Html.EndForm();}
+</div>

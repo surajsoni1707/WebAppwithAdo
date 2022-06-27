@@ -1,0 +1,21 @@
+﻿<table class="table table-bordered">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Fees</td>
+        <td>Action</td>
+    </tr>
+    @foreach( Course clist in ViewBag.CourseList)
+            {
+                <tr>
+                    <td>@clist.Id</td>
+                    <td>@clist.Name</td>
+                    <td>@clist.Fees</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { @id = clist.Id }) |
+                        @Html.ActionLink("Delete", "Delete", new { @id = clist.Id })
+                    </td>
+
+                </tr>
+            }
+</table>
